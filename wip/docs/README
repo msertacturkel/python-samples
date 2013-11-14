@@ -1,0 +1,7 @@
+1.sudo apt-get install python-setuptools  çalıştırılmalı.
+2.sudo python setup.py develop çalıştırılır. Amaç; /usr/local/lib/python2.7/dist-packages in altına .egg dosyasını değilde egg paketinin linkinin atılmasıdır.
+3.whoisinfo klasoru altındaki whoisagmlab.py dosyası calistirilarak, hbase de bulunan 'externalpage' tablosundaki kayıtlar çekilerek, row_keylerde bulunan urller işlendikten sonra whois sorgu çekilerek, gerekli alanlar tekrar ilgili row_key e ait kolonlar olarak eklenmektedir. Eger ilgili kolonlar daha önceden eklenmiş ise; whois sorgusu gönderilmeyip else... şekilde bir çıktı verilmektedir.
+whois.py dosya için ugo+x hakkı vererek calistirilmistir.
+
+Not:/usr/local/lib/python2.7/dist-packages altında pyhton-whois paketinin .egg dosyası bulundugu zaman çakışma olabilirdiğinden dikkat edilmelidir. Olması gereken "whois-0.7-py2.7.eg" şekilde bir dosyadır. 
+
