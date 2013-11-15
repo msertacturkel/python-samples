@@ -1,0 +1,9 @@
+1.sudo apt-get install python-setuptools  çalıştırılmalı.
+2.sudo python setup.py develop çalıştırılır. Amaç; /usr/local/lib/python2.7/dist-packages in altına .egg dosyasını değilde egg paketinin linkinin atılmasıdır.
+3.urlparser klasoru altındaki main.py dosyası calistirilarak, hbase de bulunan 'webpage'  tablosuna 1m url kaydının ve siaralamasinin buludugu dosya parse edilerek eklenmektedir. Ayrıca test.cron dosyasi editlenip subprocess olarak main.py içerisinde crantab test.cron çalıştırılarak görev zamanlanmıştır.
+4.ilk calistirilmas sirasinda .csv ve test.cron dosyasi bulunmalidir. Bulunmamasi durumunda hata firlamaktadir.Bu yüzden paketin içerisine koyulmustur.
+5.Kod test.cron aracılığıyla zamanla yapilmasi ile 15 günde bir calisip 1m urllerin oldugu dosyayi inceleyerek boyutunu kontrol etmekte ve dosyayinin güncellenip güncellenemedigine göre eger güncellenmisse 
+siteden dosyayi yeniden çekmektedir.Güncellenmediyse dosya ayni seklinde bir uyariyi konsola basmaktadir.
+main.py dosya için ugo+x hakkı vererek calistirilmistir.
+
+
